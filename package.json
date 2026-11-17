@@ -1,0 +1,23 @@
+{
+  "name": "grok-bot-local-exec",
+  "version": "1.0.0",
+  "description": "Patch Grok Bot's local-exec-daemon: extra disk roots for Read/Write plus a local stdio MCP client.",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "grok-bot-local-exec": "./src/cli.mjs"
+  },
+  "scripts": {
+    "apply": "node src/cli.mjs apply",
+    "restore": "node src/cli.mjs restore",
+    "status": "node src/cli.mjs status"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@electron/fuses": "^1.8.0",
+    "asar": "^3.2.0"
+  }
+}
